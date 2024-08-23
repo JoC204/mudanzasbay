@@ -1,0 +1,36 @@
+
+.navbar {
+    position: fixed;
+    box-sizing: content-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-bottom: 0.5px solid rgba(57, 56, 56, 0.286) ;
+    color: rgb(0, 0, 0);
+    z-index: 10; /* Asegura que el navbar esté sobre otros elementos */
+}
+.navBox .navbar {
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}

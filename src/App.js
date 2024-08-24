@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import LogoWhatsApp from './components/WhatsAppButton';
 import NavBar from './components/NavBar';
 import DropdownMenu from './components/DropdownMenu';
 import Home from './components/Home';
@@ -10,6 +11,7 @@ import Contacto from './components/Contacto';
 function App() {
   return (
     <div className="app-container">
+        <LogoWhatsApp />
       <Router>
         <NavBar />
         <DropdownMenu />

@@ -12,7 +12,7 @@
 
 .routes-container {
     grid-row: 2 / 3;
-    padding: 20px;
+    padding: 5px;
     overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
-    margin: 20px 10px;
+    margin: 30px 5px;
 }

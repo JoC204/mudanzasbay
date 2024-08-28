@@ -1,0 +1,46 @@
+.mudanzas-container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mudanza-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    border-radius: 0.5rem;
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+.mudanza-image.show:first-of-type {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mudanza-image:first-of-type {
+    transform: translateX(-100%);
+}
+
+.mudanza-text {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+.mudanza-text.show {
+    transform: translateX(0);
+    opacity: 1;
+    text-align: center;
+}
+
+.mudanza-image:last-of-type {
+    transform: translateY(100%);
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+.mudanza-image.show:last-of-type {
+    transform: translateY(0);
+    opacity: 1;
+}

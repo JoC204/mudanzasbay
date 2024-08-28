@@ -15,31 +15,56 @@
 
 .title {
     position: absolute;
+    font-family: 'eastman condensed';
     top: -200px;
-    font-size: 3rem;
+    font-size: 2rem;
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
     text-align: center;
     width: 100%;
+    transform: scaleY(1.5);
+    display: inline-block;
+    letter-spacing: 0.001rem; 
 }
 
 .title.show {
-    transform: translateY(200px);
+    
+    transform: translateY(250px) scaleY(5.0);
     opacity: 1;
+
 }
 
 .subtitle {
     position: absolute;
     bottom: -100px;
-    left: 20px;
+    left: 25px;
     font-size: 1.5rem;
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
+    font-weight: 900;
+    font-size: 2rem;
 }
 
 .subtitle.show {
-    transform: translateY(-200px);
+    transform: translateY(-250px);
+    text-align: center;
     opacity: 1;
+}
+.subtitle2 {
+    position: absolute;
+    bottom: -100px;
+    right: 80px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.subtitle2.show {
+    transform: translateY(-190px);
+    opacity: 1;
+    text-align: center;
 }
 
 .home-image {
@@ -48,7 +73,7 @@
     right: 150px;
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    max-width: 25rem; /* Ajusta el tamaño máximo de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
 }
 

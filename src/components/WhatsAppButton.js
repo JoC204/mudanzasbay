@@ -1,5 +1,5 @@
 import React from 'react';
-import whatsappIconUno from '../img/whatsApp.jpg'; // Asegúrate de corregir la ruta según la ubicación del ícono
+import whatsappIconUno from '../img/whatsApp.png'; // Asegúrate de corregir la ruta según la ubicación del ícono
 import '../style/WhatsAppButton.css';
 
 const WhatsAppButton = () => {

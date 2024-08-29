@@ -1,18 +1,24 @@
 /* App.css */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 .app-container {
     display: grid;
     grid-template-rows: auto 1fr;
-    height: 100vh;
+    height: 100%;
 }
 
 .navbar {
-    grid-row: 1 / 2;
+    /* grid-row: 1 / 2; */
     z-index: 10; /* Asegura que el Navbar esté por encima de otros elementos si es necesario */
 }
 
 .routes-container {
-    grid-row: 2 / 3;
-    padding: 5px;
+    /* grid-row: 2 / 3; */
+    /* padding: 5px; */
+    margin: 0;
     overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
-    margin: 30px 5px;
+    /* margin: 30px 5px; */
 }

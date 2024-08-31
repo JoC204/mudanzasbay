@@ -1,65 +1,120 @@
-/* Asegura que el contenedor principal ocupe el 100% de la pantalla */
 .home-container {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Organiza las secciones una debajo de la otra */
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.home-image {
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.home-image.show {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+}
+
+.mudanza-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.7rem;
+}
+
+.guarda-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se ajusta el número de columnas automáticamente */
+  gap: 0.02rem; /* Espacio entre las tarjetas */
+  width: 100%;
+  max-width: 2100px; /* Limita el ancho máximo */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card {
+  background-color: rgb(37, 37, 37);
+  display: flex; /* Cambiado de block a flex para centrar */
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center;
+  aspect-ratio: 1 / 1; /* Asegura un cuadrado perfecto */
+  width: 100%; /* Ocupa el 100% del espacio disponible */
+  height: 20rem;
+  color: #E86B2B;
+  gap: 0.5rem;
+}
+
+.card h2 {
+  margin: 0; /* Elimina márgenes por defecto para centrar mejor */
+  font-size: 2.5rem;
+}
+.card p {
+  margin: 0; /* Elimina márgenes por defecto para centrar mejor */
+  color: #fff;
+}
+.card img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Estilos específicos para escritorio */
+.home-image.desktop {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .home-image.desktop {
+    display: block;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column; /* Organiza las secciones una debajo de la otra */
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
+    height: auto;
+    margin-top: 0;
+  }
+  .card {
+    
+    width: 100%; /* Ocupa el 100% del espacio disponible */
   }
   
-  .home-image {
-    opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
-    width: 100%;
-    height: 100%; 
+
+  .home-image.mobile {
+    display: none;
   }
-  
-  .home-image.show {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
-  }
-  
-  .mudanza-section, .guarda-section {
-    width: 100%;
-    display: flex;
+}
+
+/* Estilos específicos para móvil */
+@media (max-width: 800px) {
+  .home-image.mobile {
+    display: block;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
   }
-  
-  /* Estilos específicos para escritorio */
   .home-image.desktop {
     display: none;
   }
-  
-  @media (min-width: 768px) {
-    .home-image.desktop {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-top: 14%;
-    }
-    .home-image.mobile {
-      display: none;
-    }
+
+  /* Para móviles: ajusta el diseño de las tarjetas */
+  .cards-section {
+    grid-template-columns: 1fr; /* Apila las tarjetas en una sola columna */
   }
-  
-  /* Estilos específicos para móvil */
-  @media (max-width: 767px) {
-    .home-image.mobile {
-      display: block;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: auto;
-      margin-top: 2rem;
-    }
-    .home-image.desktop {
-      display: none;
-    }
-  }
-  
+}

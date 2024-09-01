@@ -31,7 +31,8 @@
   }
 
   .fondo {
-    position: relative;
+    position: fixed;
+    background-position: 50% 20%;
     width: 100%;
     height: 150%;
     object-fit: cover;
@@ -41,4 +42,22 @@
     z-index: -1;
   }
 
-  
+  @media (min-width: 400px) {
+    .fondo {
+      top: -40%;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .fondo {
+      top: -90%;
+      height: 190%;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .fondo {
+      top: -180%;
+      height: 290%;
+    }
+  }

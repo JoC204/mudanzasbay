@@ -43,3 +43,40 @@
     font-size: 1.5em;
     cursor: pointer;
 }
+/* Quitar subrayado y cambiar el color del texto de los enlaces */
+.links .link {
+    text-decoration: none; 
+    color: #000; 
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Cambiar el color cuando se pase el cursor por encima */
+  .links .link:hover {
+    color: #555; 
+    border-bottom: #ea6834 0.5rem solid;
+    transition: border-bottom 0.3s ease;
+  }
+.links ul{
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .links ul{
+    display: flex;
+    gap: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    list-style: none;
+    }
+    .navbar-hamburger {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .navbar-links {
+        font-size: 1.5em;
+        gap: 40px;
+    }
+}

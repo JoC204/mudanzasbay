@@ -1,5 +1,6 @@
 // Navbar.js
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -27,6 +28,24 @@ const Navbar = () => {
         </div>
           <img src={Logo} alt="Logo" className="navbar-logoBay" />
         </div>
+
+        <div className="links">
+            <ul>
+                <li>
+                    <Link className='link' to="/" onClick={closeMenu}>Home</Link>
+                </li>
+                <li>
+                    <Link className='link' to="/mudanzas" onClick={closeMenu}>Fletes/Mudanzas</Link>
+                </li>
+                <li>
+                    <Link className='link' to="/guardamuebles" onClick={closeMenu}>Guardamuebles</Link>
+                </li>
+                <li>
+                    <Link className='link' to="/contacto" onClick={closeMenu}>Contacto</Link>
+                </li>
+            </ul>
+        </div>
+
         {/* <div className="navbar-logo">MudanzasBay</div>  */}
         <div className="navbar-links">
           <FontAwesomeIcon icon={faPhone} />

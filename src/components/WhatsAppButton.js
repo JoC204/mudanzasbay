@@ -5,7 +5,7 @@ import '../style/WhatsAppButton.css';
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/1234567890" // Reemplaza con tu número de WhatsApp
+      href="https://wa.me/+5493416541371" // Reemplaza con tu número de WhatsApp
       target="_blank"
       rel="noopener noreferrer"
       style={styles.container}
@@ -18,15 +18,15 @@ const WhatsAppButton = () => {
 const styles = {
   container: {
     position: 'fixed',
-    bottom: '20px',
-    right: '20px',
+    bottom: '30px',
+    right: '30px',
     zIndex: 1000,
     backgroundColor: 'transparent',
     borderRadius: '50%',
+    // shadow: '3px 5px 5px rgba(0, 0, 0, 0.9)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    
     cursor: 'pointer',
   },
   icon: {

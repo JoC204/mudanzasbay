@@ -1,0 +1,44 @@
+/* src/style/Contacto.css */
+
+/* Estilo general del contenedor */
+.contacto-container {
+    text-align: center; /* Centra el texto en el contenedor */
+    padding: 20px; /* Espaciado interno del contenedor */
+    margin-top: 3rem;
+    color: aliceblue;
+  }
+  
+  
+  /* Estilo del contenedor de medios */
+  
+  
+  /* Estilo de la lista de medios */
+  .medios-list {
+    box-sizing: border-box;
+    list-style: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el espaciado interno */
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1rem; /* Tamaño de fuente para la lista */
+  }
+  
+  .medios-list li {
+    box-sizing: content-box;
+    margin-bottom: 20px; 
+    font-size: 1rem;
+  }
+  .map-container{
+    margin-top: 2rem;
+  }
+
+  .fondo {
+    position: relative;
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  

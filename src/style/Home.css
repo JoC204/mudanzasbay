@@ -41,7 +41,10 @@
 
 .cards-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se ajusta el número de columnas automáticamente */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Se ajusta el número de columnas automáticamente */
   gap: 0.02rem; /* Espacio entre las tarjetas */
   width: 100%;
   max-width: 2100px; /* Limita el ancho máximo */
@@ -59,7 +62,7 @@
   aspect-ratio: 1 / 1; /* Asegura un cuadrado perfecto */
   width: 100%; /* Ocupa el 100% del espacio disponible */
   height: 20rem;
-  color: #E86B2B;
+  color: #e86b2b;
   gap: 0.5rem;
 }
 
@@ -70,6 +73,7 @@
 .card p {
   margin: 0; /* Elimina márgenes por defecto para centrar mejor */
   color: #fff;
+  font-size: 1.3rem;
 }
 .card img {
   width: 20%;
@@ -90,10 +94,8 @@
     margin-top: 0;
   }
   .card {
-    
     width: 100%; /* Ocupa el 100% del espacio disponible */
   }
-  
 
   .home-image.mobile {
     display: none;

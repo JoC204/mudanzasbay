@@ -6,6 +6,7 @@
     padding: 20px; /* Espaciado interno del contenedor */
     margin-top: 3rem;
     color: aliceblue;
+    text-shadow: black 3px 8px 15px;
   }
   
   
@@ -44,20 +45,27 @@
 
   @media (min-width: 400px) {
     .fondo {
-      top: -40%;
+      top: -30%;
+      height: 150%;
     }
   }
 
   @media (min-width: 800px) {
     .fondo {
-      top: -90%;
-      height: 190%;
+      top: -100%;
+      height: 200%;
     }
   }
 
   @media (min-width: 1000px) {
     .fondo {
       top: -180%;
-      height: 290%;
+      height: 330%;
+    }
+    .medios-container {
+      font-size: 1.5rem;
+    }
+    .medios-list li {
+      font-size: 1.5rem;
     }
   }

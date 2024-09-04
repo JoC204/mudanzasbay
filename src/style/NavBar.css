@@ -27,11 +27,6 @@
     width: 40px;
 }
 
-/* .navbar-logo {
-    font-size: 1.5em;
-    font-weight: bold;
-} */
-
 .navbar-hamburger {
     font-size: 1.5em;
     cursor: pointer;
@@ -43,6 +38,12 @@
     font-size: 1.5em;
     cursor: pointer;
     color: #ea6834;
+}
+.icon-link {
+    /* font-size: 1.5em; */
+    cursor: pointer;
+    color: black;
+
 }
 /* Quitar subrayado y cambiar el color del texto de los enlaces */
 .links .link {
@@ -79,5 +80,11 @@
     .navbar-links {
         font-size: 1.5em;
         gap: 40px;
+    }
+    .icon-link {
+        font-size: 1.5em;
+    }
+    .navbar-logoBay {
+        width: 50px;
     }
 }

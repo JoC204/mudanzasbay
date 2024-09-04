@@ -23,10 +23,12 @@ const Mudanzas = () => {
       />
       <p className={`mudanza-text ${showText ? "show" : ""}`}>
         Te tenes q mudar o trasladar objetos? Nosotros tenemos la solución más
-        segura y confiable de la ciudad! 
+        segura y confiable de la ciudad!
       </p>
-      <p className={`mudanza-text ${showText ? "show" : ""}`}>👉🏼No tenes que preocuparte por nada, nosotros realizamos todo por vos! .
-      •Consultanos lo que necesites!</p>
+      <p className={`mudanza-text ${showText ? "show" : ""}`}>
+        👉🏼No tenes que preocuparte por nada, nosotros realizamos todo por vos! .
+        •Consultanos lo que necesites!
+      </p>
       <img
         className={`mudanza-image ${showSecondImage ? "show" : ""}`}
         src={ImgMudanza2}

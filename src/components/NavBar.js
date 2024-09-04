@@ -26,7 +26,9 @@ const Navbar = () => {
         <div className="navbar-hamburger" onClick={toggleMenu}>
           <FontAwesomeIcon icon={faBars} />
         </div>
+        <Link to="/">
           <img src={Logo} alt="Logo" className="navbar-logoBay" />
+        </Link>  
         </div>
 
         <div className="links">

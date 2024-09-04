@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 import LogoWhatsApp from './components/WhatsAppButton';
 import NavBar from './components/NavBar';
 import DropdownMenu from './components/DropdownMenu';
@@ -13,6 +14,7 @@ function App() {
     <div className="app-container">
         <LogoWhatsApp />
       <Router>
+        <ScrollToTop />
         <NavBar />
         <DropdownMenu />
         <div className="routes-container">

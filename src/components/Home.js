@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import PortadaMudanzaDesktop from "../img/mudanza-desktop.png";
 import Especialista from "../img/espesialistas.png";
 import Ok from "../img/ok.png";
@@ -17,16 +18,19 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="mudanza-section">
-        <img
-          className={`home-image desktop ${showImage ? "show" : ""}`}
-          src={PortadaMudanzaDesktop}
-          alt="Mudanza"
-        />
-        <img
-          className={`home-image mobile ${showImage ? "show" : ""}`}
-          src={PortadaMudanzaMobile}
-          alt="Mudanza"
-        />
+        <Link className="link" to="/contacto">
+          <img
+            className={`home-image desktop ${showImage ? "show" : ""}`}
+            src={PortadaMudanzaDesktop}
+            alt="Mudanza"
+          />
+
+          <img
+            className={`home-image mobile ${showImage ? "show" : ""}`}
+            src={PortadaMudanzaMobile}
+            alt="Mudanza"
+          />
+        </Link>
       </div>
       <div className="cards-section">
         <div className="card">
@@ -44,16 +48,18 @@ const Home = () => {
         </div>
       </div>
       <div className="guarda-section">
-        <img
-          className={`home-image desktop ${showImage ? "show" : ""}`}
-          src={PortadaGuardaDesktop}
-          alt="Guardamuebles"
-        />
-        <img
-          className={`home-image mobile ${showImage ? "show" : ""}`}
-          src={PortadaGuardaMobile}
-          alt="Guardamuebles"
-        />
+        <Link className="link" to="/contacto">
+          <img
+            className={`home-image desktop ${showImage ? "show" : ""}`}
+            src={PortadaGuardaDesktop}
+            alt="Guardamuebles"
+          />
+          <img
+            className={`home-image mobile ${showImage ? "show" : ""}`}
+            src={PortadaGuardaMobile}
+            alt="Guardamuebles"
+          />
+        </Link>
       </div>
     </div>
   );

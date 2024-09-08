@@ -9,6 +9,7 @@ import ImgMudanza2 from "../img/img-embalaje1.png";
 import ImgMudanza3 from "../img/img-soga1.png";
 import ImgMudanza4 from "../img/img-equipo.png";
 import "../style/Mudanzas.css";
+import LazyImage from "../components/LazyImage";
 
 const Mudanzas = () => {
   const [showSection, setShowSection] = useState({
@@ -52,7 +53,7 @@ const Mudanzas = () => {
       >
         <div className="section-content">
           <div className={`image-text-container ${isEvenSection ? "order-2" : "order-1"}`}>
-            <img src={imgSrc} alt={`Mudanza ${index}`} className="mudanza-image" />
+            <LazyImage src={imgSrc} alt={`Mudanza ${index}`} className="mudanza-image" />
             <p className="description">{text}</p>
           </div>
           <div className={`video-container ${isEvenSection ? "order-1" : "order-2"}`}>

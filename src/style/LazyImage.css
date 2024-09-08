@@ -1,0 +1,9 @@
+
+  
+  /* Para aplicar un filtro a la imagen cargada */
+  .lazy-load-image-loaded {
+    filter: blur(0);
+  }
+  .lazy-load-image-background.blur {
+    transition: filter 1s ease; 
+  }

@@ -4,8 +4,10 @@ import Video1 from "../videos/video1.mp4";
 import Video2 from "../videos/video2.mp4";
 import Video3 from "../videos/video3.mp4";
 import Video4 from "../videos/video4.mp4";
-import ImgMudanza1 from "../img/mudanza1.png";
-import ImgMudanza2 from "../img/img-mudanza1.png";
+import ImgMudanza1 from "../img/img-mudanza1.png";
+import ImgMudanza2 from "../img/img-embalaje1.png";
+import ImgMudanza3 from "../img/img-soga1.png";
+import ImgMudanza4 from "../img/img-equipo.png";
 import "../style/Mudanzas.css";
 
 const Mudanzas = () => {
@@ -41,6 +43,7 @@ const Mudanzas = () => {
     const isEvenSection = index % 2 === 0;
 
     return (
+      
       <section
         className={`mudanza-section ${
           showSection[`section${index}`] ? "show" : ""
@@ -65,25 +68,26 @@ const Mudanzas = () => {
       {renderSection(
         1,
         ImgMudanza1,
-        Video1,
+        Video2,
         "Te tenes que mudar o trasladar objetos? Nosotros tenemos la solución más segura y confiable de la ciudad!"
       )}
       {renderSection(
         2,
         ImgMudanza2,
-        Video2,
+        Video3,
         "No tenes que preocuparte por nada, nosotros realizamos todo por vos!"
       )}
       {renderSection(
+        
         3,
-        ImgMudanza1,
+        ImgMudanza3,
         Video4,
         "Ofrecemos servicios de mudanza de alta calidad, adaptados a tus necesidades."
       )}
       {renderSection(
         4,
-        ImgMudanza2,
-        Video4,
+        ImgMudanza4,
+        Video1,
         "Consultanos lo que necesites! Estamos aquí para ayudarte en cada paso."
       )}
     </div>

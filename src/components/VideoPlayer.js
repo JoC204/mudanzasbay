@@ -32,6 +32,7 @@ const VideoPlayer = ({ src, poster, startAt = 0 }) => {
         poster={poster}
         controls
         autoPlay
+        loop
       />
     </div>
   );

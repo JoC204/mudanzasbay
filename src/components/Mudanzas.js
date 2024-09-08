@@ -1,39 +1,91 @@
 import React, { useEffect, useState } from "react";
-import ImgMudanza1 from "../img/mudanza1.png"; // Asegúrate de agregar las rutas correctas
-import ImgMudanza2 from "../img/mudanza2.png"; // para tus imágenes
-import "../style/Mudanzas.css"; // Asegúrate de crear este archivo para los estilos
+import VideoPlayer from "./VideoPlayer";
+import Video1 from "../videos/video1.mp4";
+import Video2 from "../videos/video2.mp4";
+import Video3 from "../videos/video3.mp4";
+import Video4 from "../videos/video4.mp4";
+import ImgMudanza1 from "../img/mudanza1.png";
+import ImgMudanza2 from "../img/img-mudanza1.png";
+import "../style/Mudanzas.css";
 
 const Mudanzas = () => {
-  const [showFirstImage, setShowFirstImage] = useState(false);
-  const [showText, setShowText] = useState(false);
-  const [showSecondImage, setShowSecondImage] = useState(false);
+  const [showSection, setShowSection] = useState({
+    section1: true,
+    section2: true,
+    section3: true,
+    section4: true,
+    section5: true,
+  });
 
   useEffect(() => {
-    setTimeout(() => setShowFirstImage(true), 500); // Primera imagen aparece después de 0.5s
-    setTimeout(() => setShowText(true), 1000); // Texto aparece 1 segundo después de la primera imagen
-    setTimeout(() => setShowSecondImage(true), 1500); // Segunda imagen aparece 1 segundo después del texto
+    const handleScroll = () => {
+      const sections = document.querySelectorAll(".mudanza-section");
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setShowSection((prev) => ({
+            ...prev,
+            [`section${index + 1}`]: true,
+          }));
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
+  const renderSection = (index, imgSrc, videoSrc, text) => {
+    const isEvenSection = index % 2 === 0;
+
+    return (
+      <section
+        className={`mudanza-section ${
+          showSection[`section${index}`] ? "show" : ""
+        }`}
+        id={`section${index}`}
+      >
+        <div className="section-content">
+          <div className={`image-text-container ${isEvenSection ? "order-2" : "order-1"}`}>
+            <img src={imgSrc} alt={`Mudanza ${index}`} className="mudanza-image" />
+            <p className="description">{text}</p>
+          </div>
+          <div className={`video-container ${isEvenSection ? "order-1" : "order-2"}`}>
+            <VideoPlayer className="custom-video" src={videoSrc} />
+          </div>
+        </div>
+      </section>
+    );
+  };
+
   return (
-    <div className="mudanzas-container">
-      <img
-        className={`mudanza-image ${showFirstImage ? "show" : ""}`}
-        src={ImgMudanza1}
-        alt="Mudanza 1"
-      />
-      <p className={`mudanza-text ${showText ? "show" : ""}`}>
-        Te tenes q mudar o trasladar objetos? Nosotros tenemos la solución más
-        segura y confiable de la ciudad!
-      </p>
-      <p className={`mudanza-text ${showText ? "show" : ""}`}>
-        👉🏼No tenes que preocuparte por nada, nosotros realizamos todo por vos! .
-        •Consultanos lo que necesites!
-      </p>
-      <img
-        className={`mudanza-image ${showSecondImage ? "show" : ""}`}
-        src={ImgMudanza2}
-        alt="Mudanza 2"
-      />
+    <div className="mudanzas-scroll-container">
+      {renderSection(
+        1,
+        ImgMudanza1,
+        Video1,
+        "Te tenes que mudar o trasladar objetos? Nosotros tenemos la solución más segura y confiable de la ciudad!"
+      )}
+      {renderSection(
+        2,
+        ImgMudanza2,
+        Video2,
+        "No tenes que preocuparte por nada, nosotros realizamos todo por vos!"
+      )}
+      {renderSection(
+        3,
+        ImgMudanza1,
+        Video4,
+        "Ofrecemos servicios de mudanza de alta calidad, adaptados a tus necesidades."
+      )}
+      {renderSection(
+        4,
+        ImgMudanza2,
+        Video4,
+        "Consultanos lo que necesites! Estamos aquí para ayudarte en cada paso."
+      )}
     </div>
   );
 };

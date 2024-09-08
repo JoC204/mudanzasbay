@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <div className="mudanza-section">
+      <div className="mudanzaBanners">
         <Link className="link" to="/contacto">
           <img
             className={`home-image desktop ${showImage ? "show" : ""}`}
@@ -32,7 +32,7 @@ const Home = () => {
           />
         </Link>
       </div>
-      <div className="cards-section">
+      <div className="cardsBanners">
         <div className="card">
           <img src={Especialista} alt="Especialista"></img>
           <h2>Somos especialistas</h2>
@@ -47,7 +47,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="guarda-section">
+      <div className="guardaBanners">
         <Link className="link" to="/contacto">
           <img
             className={`home-image desktop ${showImage ? "show" : ""}`}

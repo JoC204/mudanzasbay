@@ -23,7 +23,7 @@
   opacity: 1;
 }
 
-.mudanza-section {
+.mudanzaBanners {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@
   margin-top: 3.7rem;
 }
 
-.guarda-section {
+.guardaBanners{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@
   margin-top: 0;
 }
 
-.cards-section {
+.cardsBanners {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -116,7 +116,7 @@
   }
 
   /* Para móviles: ajusta el diseño de las tarjetas */
-  .cards-section {
+  .cardsBanners {
     grid-template-columns: 1fr; /* Apila las tarjetas en una sola columna */
   }
 }

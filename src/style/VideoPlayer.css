@@ -1,0 +1,19 @@
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0;
+  width: 80%;
+}
+
+.video-player {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-video-container {
+  border-radius: 1rem;
+  width: 30%;
+  
+}

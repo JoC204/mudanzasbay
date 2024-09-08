@@ -80,3 +80,28 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .image-text-container,
+  .video-container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .mudanza-image {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .custom-video {
+    height: auto;
+  }
+}

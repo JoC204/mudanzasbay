@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PortadaMudanzaDesktop from "../img/mudanza-desktop.png";
 import Especialista from "../img/espesialistas.png";
 import Ok from "../img/ok.png";
-import PortadaMudanzaMobile from "../img/mudanza-mobile.png";
+import PortadaMudanzaMobile from "../img/mudanza-mobile-new.png";
 import PortadaGuardaDesktop from "../img/guarda-desk.png";
 import PortadaGuardaMobile from "../img/guardamuebles-mobile.png";
 import "../style/Home.css";

@@ -1,55 +1,59 @@
 .guardamuebles-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-between; */
-    height: auto;
-    padding: 2rem;
-    overflow-x: hidden;
-    gap: 3rem;
-    margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  height: auto;
+  padding: 2rem;
+  overflow-x: hidden;
+  gap: 3rem;
+  margin-top: 3rem;
 }
 
 .title-guarda {
-    font-size: 2rem;
-    font-weight: 200;
-    opacity: 0;
-    transform: translateY(500px);
-    transition: opacity 1s ease, transform 1s ease;
-    margin: 0;
+  font-size: 2rem;
+  font-weight: 200;
+  opacity: 0;
+  transform: translateY(500px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin: 0;
 }
 
 .title-guarda.show {
-    opacity: 1;
-    transform: translateY(20%);
+  opacity: 1;
+  transform: translateY(20%);
+  border-bottom: #ea6834 solid 8px;
+  font-weight: 600;
 }
 
 .description-guarda {
-    font-size: 1.5rem;
-    opacity: 0;
-    transform: translateX(-300%);
-    transition: opacity 1s ease, transform 1s ease;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(-300%);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .description-guarda.show {
-    opacity: 1;
-    transform: translateX(0);
-    text-align: center;
-    margin: 0;
+  opacity: 1;
+  transform: translateX(0);
+  text-align: center;
+  margin: 0;
 }
 
-.guardamuebles-image, .guardamuebles2-image {
-    width: 100%;
-    max-width: 1000px;
-    opacity: 0;
-    transform: scale(0);
-    transition: opacity 3s ease, transform 1.5s ease;
-    border-radius: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+.guardamuebles-image,
+.guardamuebles2-image {
+  width: 100%;
+  max-width: 1000px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 3s ease, transform 1.5s ease;
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.guardamuebles-image.show, .guardamuebles2-image.show {
-    opacity: 1;
-    transform: scale(1);
+.guardamuebles-image.show,
+.guardamuebles2-image.show {
+  opacity: 1;
+  transform: scale(1);
 }

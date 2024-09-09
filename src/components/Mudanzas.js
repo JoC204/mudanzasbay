@@ -9,9 +9,9 @@ import ImgMudanza2 from "../img/img-embalaje1.png";
 import ImgMudanza3 from "../img/img-soga1.png";
 import ImgMudanza4 from "../img/img-equipo.png";
 import ImgMudanza1Mobile from "../img/img-mudanza-movile.png";
-import ImgMudanza2Mobile from "../img/img-mudanza-movile.png";
-import ImgMudanza3Mobile from "../img/img-mudanza-movile.png";
-import ImgMudanza4Mobile from "../img/img-mudanza-movile.png";
+import ImgMudanza2Mobile from "../img/img-embalaje1-movile.png";
+import ImgMudanza3Mobile from "../img/img-soga1-movile.png";
+import ImgMudanza4Mobile from "../img/img-equipo-movile.png";
 import "../style/Mudanzas.css";
 
 const Mudanzas = () => {

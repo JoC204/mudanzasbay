@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import ImgGuardamuebles from '../img/guarda1.png';
 import ImgGuardamuebles2 from '../img/guarda2.png';
 import '../style/GuardaMuebles.css'; 
-// import LazyImage from '../components/LazyImage';
 
 const Guardamuebles = () => {
     const [showTitle, setShowTitle] = useState(false);

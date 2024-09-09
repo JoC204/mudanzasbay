@@ -18,7 +18,7 @@ const WhatsAppButton = () => {
 const styles = {
   container: {
     position: 'fixed',
-    bottom: '30px',
+    bottom: '10px',
     right: '30px',
     zIndex: 1000,
     backgroundColor: 'transparent',
@@ -30,8 +30,8 @@ const styles = {
     cursor: 'pointer',
   },
   icon: {
-    width: '60px',
-    height: '60px',
+    width: '50px',
+    height: '50px',
   },
 };
 

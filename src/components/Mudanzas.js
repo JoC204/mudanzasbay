@@ -8,55 +8,52 @@ import ImgMudanza1 from "../img/img-mudanza1.png";
 import ImgMudanza2 from "../img/img-embalaje1.png";
 import ImgMudanza3 from "../img/img-soga1.png";
 import ImgMudanza4 from "../img/img-equipo.png";
+import ImgMudanza1Mobile from "../img/img-mudanza-movile.png";
+import ImgMudanza2Mobile from "../img/img-mudanza-movile.png";
+import ImgMudanza3Mobile from "../img/img-mudanza-movile.png";
+import ImgMudanza4Mobile from "../img/img-mudanza-movile.png";
 import "../style/Mudanzas.css";
-import LazyImage from "../components/LazyImage";
 
 const Mudanzas = () => {
-  const [showSection, setShowSection] = useState({
-    section1: true,
-    section2: true,
-    section3: true,
-    section4: true,
-    section5: true,
-  });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll(".mudanza-section");
-      sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          setShowSection((prev) => ({
-            ...prev,
-            [`section${index + 1}`]: true,
-          }));
-        }
-      });
+    const updateView = () => {
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    updateView(); // Check on mount
+    window.addEventListener("resize", updateView);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateView);
     };
   }, []);
 
-  const renderSection = (index, imgSrc, videoSrc, text) => {
+  const renderSection = (index, imgSrc, imgSrcMobile, videoSrc, text) => {
     const isEvenSection = index % 2 === 0;
+    const imgToShow = isMobile ? imgSrcMobile : imgSrc;
 
     return (
-      
       <section
         className={`mudanza-section ${
-          showSection[`section${index}`] ? "show" : ""
+          [`section${index}`] ? "show" : ""
         }`}
         id={`section${index}`}
       >
         <div className="section-content">
-          <div className={`image-text-container ${isEvenSection ? "order-2" : "order-1"}`}>
-            <LazyImage src={imgSrc} alt={`Mudanza ${index}`} className="mudanza-image" />
+          <div
+            className={`image-text-container ${
+              isEvenSection ? "order-2" : "order-1"
+            }`}
+          >
+            <img src={imgToShow} alt={`Mudanza ${index}`} className="mudanza-image" />
             <p className="description">{text}</p>
           </div>
-          <div className={`video-container ${isEvenSection ? "order-1" : "order-2"}`}>
+          <div
+            className={`video-container ${
+              isEvenSection ? "order-1" : "order-2"
+            } ${isMobile ? "hide-video" : ""}`}
+          >
             <VideoPlayer className="custom-video" src={videoSrc} />
           </div>
         </div>
@@ -69,25 +66,28 @@ const Mudanzas = () => {
       {renderSection(
         1,
         ImgMudanza1,
+        ImgMudanza1Mobile,
         Video2,
         "Te tenes que mudar o trasladar objetos? Nosotros tenemos la solución más segura y confiable de la ciudad!"
       )}
       {renderSection(
         2,
         ImgMudanza2,
+        ImgMudanza2Mobile,
         Video3,
         "No tenes que preocuparte por nada, nosotros realizamos todo por vos!"
       )}
       {renderSection(
-        
         3,
         ImgMudanza3,
+        ImgMudanza3Mobile,
         Video4,
         "Ofrecemos servicios de mudanza de alta calidad, adaptados a tus necesidades."
       )}
       {renderSection(
         4,
         ImgMudanza4,
+        ImgMudanza4Mobile,
         Video1,
         "Consultanos lo que necesites! Estamos aquí para ayudarte en cada paso."
       )}

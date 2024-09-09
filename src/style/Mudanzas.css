@@ -1,3 +1,5 @@
+/* Mudanzas.css */
+
 .mudanzas-scroll-container {
   height: 100vh;
   overflow-y: scroll;
@@ -81,27 +83,34 @@
   transform: translateX(0);
 }
 
+.hide-video {
+  display: none;
+}
+
 /* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .section-content {
     flex-direction: column;
     margin-top: 2rem;
   }
 
-  .image-text-container,
-  .video-container {
+  .image-text-container
+   {
     width: 100%;
     margin: 0;
     padding: 10px;
   }
 
   .mudanza-image {
-    width: 100%;
+    width: 80%;
     max-width: none;
     margin-bottom: 10px;
   }
 
   .custom-video {
-    height: auto;
+    display: none;
+  }
+  .description {
+    font-size: 1rem;
   }
 }

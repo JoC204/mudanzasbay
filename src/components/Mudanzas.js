@@ -4,14 +4,6 @@ import Video1 from "../videos/video1.mp4";
 import Video2 from "../videos/video2.mp4";
 import Video3 from "../videos/video3.mp4";
 import Video4 from "../videos/video4.mp4";
-import ImgMudanza1 from "../img/img-mudanza1.png";
-import ImgMudanza2 from "../img/img-embalaje1.png";
-import ImgMudanza3 from "../img/img-soga1.png";
-import ImgMudanza4 from "../img/img-equipo.png";
-import ImgMudanza1Mobile from "../img/img-mudanza-movile.png";
-import ImgMudanza2Mobile from "../img/img-embalaje1-movile.png";
-import ImgMudanza3Mobile from "../img/img-soga1-movile.png";
-import ImgMudanza4Mobile from "../img/img-equipo-movile.png";
 import "../style/Mudanzas.css";
 
 const Mudanzas = () => {
@@ -19,7 +11,8 @@ const Mudanzas = () => {
 
   useEffect(() => {
     const updateView = () => {
-      setIsMobile(window.innerWidth <= 768);
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      setIsMobile(isMobile);
     };
 
     updateView(); // Check on mount
@@ -67,29 +60,29 @@ const Mudanzas = () => {
     <div className="mudanzas-scroll-container">
       {renderSection(
         1,
-        ImgMudanza1,
-        ImgMudanza1Mobile,
+        require("../img/img-mudanza-uno.png"),
+        require("../img/img-mudanza-movile.png"),
         Video2,
         "Te tenes que mudar o trasladar objetos? Nosotros tenemos la solución más segura y confiable de la ciudad!"
       )}
       {renderSection(
         2,
-        ImgMudanza2,
-        ImgMudanza2Mobile,
+        require("../img/img-embalaje-uno.png"),
+        require("../img/img-embalaje1-movile.png"),
         Video3,
         "No tenes que preocuparte por nada, nosotros realizamos todo por vos!"
       )}
       {renderSection(
         3,
-        ImgMudanza3,
-        ImgMudanza3Mobile,
+        require("../img/img-soga-uno.png"),
+        require("../img/img-soga1-movile.png"),
         Video4,
         "Ofrecemos servicios de mudanza de alta calidad, adaptadas a tus necesidades."
       )}
       {renderSection(
         4,
-        ImgMudanza4,
-        ImgMudanza4Mobile,
+        require("../img/img-equipo-uno.png"),
+        require("../img/img-equipo-movile.png"),
         Video1,
         "Consultanos lo que necesites! Estamos aquí para ayudarte en cada paso."
       )}

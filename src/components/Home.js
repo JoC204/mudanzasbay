@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import PortadaMudanzaDesktop from "../img/mudanza-desktop.png";
+import PortadaMudanzaDesktop from "../img/mudanza-desktop-uno.png";
 import Especialista from "../img/espesialistas.png";
 import Ok from "../img/ok.png";
 import PortadaMudanzaMobile from "../img/mudanza-mobile-new.png";
-import PortadaGuardaDesktop from "../img/guarda-desk.png";
+import PortadaGuardaDesktop from "../img/guarda-desk-uno.png";
 import PortadaGuardaMobile from "../img/guardamuebles-mobile.png";
 import "../style/Home.css";
 
@@ -18,7 +18,12 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="mudanzaBanners">
-        <Link className="link" to="/contacto">
+        <a
+          className="link"
+          href="https://wa.me/+5493416541371"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             className={`home-image desktop ${showImage ? "show" : ""}`}
             src={PortadaMudanzaDesktop}
@@ -30,7 +35,7 @@ const Home = () => {
             src={PortadaMudanzaMobile}
             alt="Mudanza"
           />
-        </Link>
+        </a>
       </div>
       <div className="cardsBanners">
         <div className="card">
@@ -48,7 +53,12 @@ const Home = () => {
         </div>
       </div>
       <div className="guardaBanners">
-        <Link className="link" to="/contacto">
+        <a
+          className="link"
+          href="https://wa.me/+5493416541371"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             className={`home-image desktop ${showImage ? "show" : ""}`}
             src={PortadaGuardaDesktop}
@@ -59,7 +69,7 @@ const Home = () => {
             src={PortadaGuardaMobile}
             alt="Guardamuebles"
           />
-        </Link>
+        </a>
       </div>
     </div>
   );

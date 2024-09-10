@@ -35,9 +35,7 @@ const Mudanzas = () => {
 
     return (
       <section
-        className={`mudanza-section ${
-          [`section${index}`] ? "show" : ""
-        }`}
+        className={`mudanza-section ${[`section${index}`] ? "show" : ""}`}
         id={`section${index}`}
       >
         <div className="section-content">
@@ -46,7 +44,11 @@ const Mudanzas = () => {
               isEvenSection ? "order-2" : "order-1"
             }`}
           >
-            <img src={imgToShow} alt={`Mudanza ${index}`} className="mudanza-image" />
+            <img
+              src={imgToShow}
+              alt={`Mudanza ${index}`}
+              className="mudanza-image"
+            />
             <p className="description">{text}</p>
           </div>
           <div
@@ -82,7 +84,7 @@ const Mudanzas = () => {
         ImgMudanza3,
         ImgMudanza3Mobile,
         Video4,
-        "Ofrecemos servicios de mudanza de alta calidad, adaptados a tus necesidades."
+        "Ofrecemos servicios de mudanza de alta calidad, adaptadas a tus necesidades."
       )}
       {renderSection(
         4,

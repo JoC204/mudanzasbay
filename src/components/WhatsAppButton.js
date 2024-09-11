@@ -18,12 +18,12 @@ const WhatsAppButton = () => {
 const styles = {
   container: {
     position: 'fixed',
-    bottom: '10px',
+    bottom: '20px',
     right: '30px',
     zIndex: 1000,
     backgroundColor: 'transparent',
     borderRadius: '50%',
-    // shadow: '3px 5px 5px rgba(0, 0, 0, 0.9)',
+    
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

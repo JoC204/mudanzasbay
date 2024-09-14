@@ -1,6 +1,6 @@
 // src/components/VideoPlayer.js
-import React, { useEffect, useRef, useState } from 'react';
-import '../style/VideoPlayer.css';
+import React, { useEffect, useRef, useState } from "react";
+import "../style/VideoPlayer.css";
 
 const VideoPlayer = ({ src, poster, startAt = 0 }) => {
   const videoRef = useRef(null);
@@ -33,10 +33,10 @@ const VideoPlayer = ({ src, poster, startAt = 0 }) => {
         controls
         autoPlay
         loop
+        playsInline
       />
     </div>
   );
 };
 
 export default VideoPlayer;
-

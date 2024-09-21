@@ -1,5 +1,4 @@
-// Navbar.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +9,8 @@ import "../style/NavBar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,8 +20,27 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  // Hook para controlar la visibilidad del Navbar al hacer scroll
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    // Si el usuario desplaza hacia abajo, oculta el navbar. Si desplaza hacia arriba, muéstralo.
+    if (prevScrollPos > currentScrollPos) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <div className="navBox">
+    <div className={`navBox ${visible ? "visible" : "hidden"}`}>
       <nav className="navbar">
         <div className="navbar-logoBox">
           <div className="navbar-hamburger" onClick={toggleMenu}>

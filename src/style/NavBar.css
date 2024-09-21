@@ -1,90 +1,101 @@
-
-.navbar {
+.navBox {
+    transition: top 0.6s ease-in-out; /* Transición suave */
     position: fixed;
-    box-sizing: content-box;
-    top: 0;
-    left: 0;
     width: 100%;
+    z-index: 1000;
+  }
+  
+  .navBox.visible {
+    top: 0; /* Cuando es visible, permanece en la parte superior */
+  }
+  
+  .navBox.hidden {
+    top: -100px; /* Cuando está oculta, se desplaza hacia arriba fuera de la pantalla */
+  }
+  
+  .navbar {
+    box-sizing: content-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
     background-color: #fff;
-    border-bottom: 0.5px solid rgba(57, 56, 56, 0.286) ;
+    border-bottom: 0.5px solid rgba(57, 56, 56, 0.286);
     color: rgb(0, 0, 0);
-    z-index: 10; /* Asegura que el navbar esté sobre otros elementos */
-}
-.navBox .navbar {
-    z-index: 1000;
-}
-.navbar-logoBox {
+    width: 100%;
+    z-index: 10;
+    transition: top 0.6s ease-in-out;
+  }
+  
+  .navbar-logoBox {
     display: flex;
     align-items: center;
     gap: 30px;
-}
-
-.navbar-logoBay {
+  }
+  
+  .navbar-logoBay {
     width: 40px;
-}
-
-.navbar-hamburger {
+  }
+  
+  .navbar-hamburger {
     font-size: 1.5em;
     cursor: pointer;
-}
-
-.navbar-links {
+  }
+  
+  .navbar-links {
     display: flex;
     gap: 20px;
     font-size: 1.5em;
     cursor: pointer;
     color: #ea6834;
-}
-.icon-link {
-    /* font-size: 1.5em; */
+  }
+  
+  .icon-link {
     cursor: pointer;
     color: black;
-
-}
-/* Quitar subrayado y cambiar el color del texto de los enlaces */
-.links .link {
-    text-decoration: none; 
-    color: #000; 
+  }
+  
+  .links .link {
+    text-decoration: none;
+    color: #000;
     transition: color 0.3s ease;
     font-size: 1.2rem;
     font-weight: 200;
   }
   
-  /* Cambiar el color cuando se pase el cursor por encima */
   .links .link:hover {
-    color: #555; 
+    color: #555;
     border-bottom: #ea6834 0.5rem solid;
     transition: border-bottom 0.3s ease;
   }
-.links ul{
+  
+  .links ul {
     display: none;
-}
-
-@media (min-width: 800px) {
-    .links ul{
-    display: flex;
-    gap: 30px;
-    font-size: 1em;
-    cursor: pointer;
-    list-style: none;
+  }
+  
+  @media (min-width: 800px) {
+    .links ul {
+      display: flex;
+      gap: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      list-style: none;
     }
     .navbar-hamburger {
-        display: none;
+      display: none;
     }
-}
-@media (min-width: 1200px) {
+  }
+  
+  @media (min-width: 1200px) {
     .navbar-links {
-        font-size: 1.5em;
-        gap: 40px;
+      font-size: 1.5em;
+      gap: 40px;
     }
     .icon-link {
-        font-size: 1.5em;
+      font-size: 1.5em;
     }
     .navbar-logoBay {
-        width: 50px;
+      width: 50px;
     }
-}
+  }
+  

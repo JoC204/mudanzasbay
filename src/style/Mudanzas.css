@@ -1,7 +1,7 @@
 /* Mudanzas.css */
 
 .mudanzas-scroll-container {
-  height: 100vh;
+  height: auto; /* Ajusta la altura, y deja funcionar el scroll centrado */
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -9,7 +9,7 @@
 }
 
 .mudanza-section {
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,7 @@
     font-size: 1rem;
   }
   .mudanzas-scroll-container {
-    height: 100vh;
+    height: auto;
     overflow-y: none;
 
   }

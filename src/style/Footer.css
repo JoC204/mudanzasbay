@@ -1,0 +1,15 @@
+/* src/style/Footer.css */
+.footer-container {
+    padding: 1rem;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+
+.footer-divider {
+    margin: 1rem 8rem;
+    border: none;
+    height: 1px;
+    text-align: center;
+    background-color: #ea6834;
+}

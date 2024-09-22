@@ -1,8 +1,11 @@
 /* src/style/Footer.css */
 .footer-container {
     padding: 1rem;
-    background-color: #f8f8f8;
+    background-color: #fff;
     text-align: center;
+}
+.footer-container a {
+    margin: 0 2rem;
 }
 
 

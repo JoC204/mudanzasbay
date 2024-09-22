@@ -48,12 +48,77 @@
     font-size: 1.5em;
     cursor: pointer;
     color: #ea6834;
+    max-width: 100%; /* Se adapta al contenedor */
+    height: auto; /* Mantiene la proporción original */
   }
   
   .icon-link {
     cursor: pointer;
     color: black;
+    
   }
+
+  #phone {
+    display: inline-block; /* Asegúrate de que el elemento sea "inline-block" o "block" */
+    transition: transform 0.1s; /* Esto es opcional para suavizar la entrada/salida */
+  }
+  
+  #phone:hover {
+    animation: vibrate 0.2s infinite; /* Aplica la animación en el hover */
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: rotate(3deg);
+    }
+    25% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+    75% {
+      transform: rotate(-3deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .icon-envelope-open {
+    display: none; /* Oculta el ícono abierto por defecto */
+  }
+  
+  .icon-link:hover .icon-envelope {
+    display: none; /* Oculta el ícono cerrado al hacer hover */
+  }
+  
+  .icon-link:hover .icon-envelope-open {
+    display: inline; /* Muestra el ícono abierto al hacer hover */
+  }
+
+
+  .icon-link {
+    position: relative; /* Para que los logos se superpongan */
+  }
+  
+  .logo-default {
+    display: block; /* Muestra el logo por defecto */
+  }
+  
+  .logo-hover {
+    display: none; /* Oculta el logo alternativo por defecto */
+  }
+  
+  .icon-link:hover .logo-default {
+    display: none; /* Oculta el logo por defecto al hacer hover */
+  }
+  
+  .icon-link:hover .logo-hover {
+    display: inline-block; /* Muestra el logo alternativo al hacer hover */
+    width: 31.5px;
+  }
+  
   
   .links .link {
     text-decoration: none;
@@ -83,6 +148,9 @@
     }
     .navbar-hamburger {
       display: none;
+    }
+    .icon-link {
+      position: relative; /* Para que los logos se superpongan */
     }
   }
   

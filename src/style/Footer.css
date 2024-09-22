@@ -12,7 +12,13 @@
 .footer-divider {
     margin: 1rem 8rem;
     border: none;
-    height: 1px;
+    height: 2px;
     text-align: center;
-    background-color: #ea6834;
+    background-color: #eb8259;
+}
+
+@media (max-width: 500px) {
+    .footer-divider{
+        margin: 1rem 2rem;
+    }
 }

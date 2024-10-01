@@ -19,7 +19,7 @@ const Home = () => {
       <div className="mudanzaBanners">
         <a
           className="link"
-          href="https://wa.me/+5493416541371"
+          href="https://wa.me/+5493416541371?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20MudanzasBay%0A%0A%20--"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -54,7 +54,7 @@ const Home = () => {
       <div className="guardaBanners">
         <a
           className="link"
-          href="https://wa.me/+5493416541371"
+          href="https://wa.me/+5493416541371?text=Hola%2C%20te%20contacto%20desde%20la%20web%20de%20MudanzasBay%0A%0A%20--"
           target="_blank"
           rel="noopener noreferrer"
         >
